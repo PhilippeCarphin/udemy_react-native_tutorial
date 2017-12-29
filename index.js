@@ -5,4 +5,4 @@ const App = () => (
   <Text>Hello World</Text>
 );
 
-AppRegistry.registerComponent('albums', () => App);
+AppRegistry.registerComponent('udemy_react_native_course', () => App);

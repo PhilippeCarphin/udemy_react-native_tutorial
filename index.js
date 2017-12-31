@@ -4,7 +4,7 @@ import Header from './src/components/header';
 import AlbumList from './src/components/albumlist';
 
 const App = () => (
-  <View>
+  <View style={{ flex: 1 }}>
     <Header title="Albums" />
     <AlbumList />
   </View>

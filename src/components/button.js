@@ -4,10 +4,13 @@ import { TouchableOpacity, Text } from 'react-native';
 //Ref : https://facebook.github.io/react-native/docs/touchableopacity.html
 // See TouchableXYZ in the left sidebar
 
-const Button = () => {
+const Button = ({ pressHandler }) => {
+  // probably should call pressHandler 'onPress' for uniformity
+  // but for this tutorial, I'm using my own name to show that
+  // this is a name that I chose
   const { buttonStyle, textStyle } = styles;
   return (
-    <TouchableOpacity style={buttonStyle}>
+    <TouchableOpacity onPress={pressHandler} style={buttonStyle}>
       <Text style={textStyle}>Click me!!!</Text>
     </TouchableOpacity>
   );

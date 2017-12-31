@@ -1,11 +1,13 @@
 import React from 'react';
-import { View, Text, Image } from 'react-native';
+import { View, Text, Image, Linking } from 'react-native';
 import Card from './card';
 import CardSection from './cardsection';
 import Button from './button';
 
+// Ref: APIs -> Linking section of the react-native documentation
+
 const AlbumDetails = ({ album }) => {
-  const { title, artist, thumbnail_image, image } = album;
+  const { title, artist, thumbnail_image, image, url } = album;
   const {
     thumbnailStyle,
     headerContentStyle,
@@ -31,7 +33,7 @@ const AlbumDetails = ({ album }) => {
         <Image style={albumImageStyle} source={{ uri: image }} />
       </CardSection>
       <CardSection>
-        <Button pressHandler={() => console.log(title)} />
+        <Button pressHandler={() => Linking.openURL(url)} />
       </CardSection>
     </Card>
   );

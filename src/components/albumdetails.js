@@ -33,7 +33,7 @@ const AlbumDetails = ({ album }) => {
         <Image style={albumImageStyle} source={{ uri: image }} />
       </CardSection>
       <CardSection>
-        <Button pressHandler={() => Linking.openURL(url)} />
+        <Button pressHandler={() => Linking.openURL(url)} text='click me' />
       </CardSection>
     </Card>
   );
